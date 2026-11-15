@@ -12,7 +12,7 @@ a {
   font-style: normal; }
 @font-face {
   font-family: 'JF-Dot-Shinonome-14-Regular';
-  src: url("/web/20181231030042im_/https://www.deltarune.com/assets/fonts/JF-Dot-Shinonome-14-Regular.eot#iefix") format("embedded-opentype"), url("/web/20181231030042im_/https://www.deltarune.com/assets/fonts/JF-Dot-Shinonome-14-Regular.woff") format("woff"), url("/web/20181231030042im_/https://www.deltarune.com/assets/fonts/JF-Dot-Shinonome-14-Regular.ttf") format("truetype"), url("/web/20181231030042im_/https://www.deltarune.com/assets/fonts/JF-Dot-Shinonome-14-Regular.svg#JF-Dot-Shinonome-14-Regular") format("svg");
+  src: url("https://nattiercraft.github.io/unrelatedsite/assets/fonts/JF-Dot-Shinonome-14-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 * {
