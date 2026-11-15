@@ -7,7 +7,7 @@ a {
 
 @font-face {
   font-family: '8bitOperatorPlus-Bold';
-  src: url("/nattiercraft.github.io/unrelatedsite/assets/fonts/8bitOperatorPlus-Bold.ttf") format("truetype");
+  src: url("https://nattiercraft.github.io/unrelatedsite/assets/fonts/8bitOperatorPlus-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
