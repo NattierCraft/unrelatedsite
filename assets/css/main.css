@@ -33,18 +33,6 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
-
-.centre {
-  display: flex;
-  flex-direction: column; }
-
-.centre img {
-  width: 100%; }
-
-.centre p {
-  font: small-caps bold 1.2rem sans-serif;
-  text-align: center; }
-
 .row {
   margin-right: -15px;
   margin-left: -15px; }
