@@ -1,21 +1,115 @@
-<html>
-  <head>
-    <title>room_dogcheck</title>
-    <style>
-      body {
-        background-color: black;
-      }
-    </style>
-  </head>
-  <body>
-    <div style="text-align: center;">
-      <img src="/assets/404/dog-sleep.gif">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>room_dogcheck</title>
+
+  <!-- INLINE CSS (formerly extra.css) -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #fff;
+      font-family: "8bitOperatorPlus-Bold", monospace;
+    }
+
+    @font-face {
+      font-family: '8bitOperatorPlus-Bold';
+      src: url("assets/fonts/8bitOperatorPlus-Bold.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: '8bitOperatorPlus-Regular';
+      src: url("assets/fonts/8bitOperatorPlus-Regular.woff") format("woff");
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    #center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .dog {
+      min-width: 320px;
+      max-width: 100%;
+      min-height: 320px;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dog img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    .dog2 {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="center">
+    <div class="dog" id="dog_sleep">
+      <img alt="Sleeping dog" class="dog1" src="assets/images/dog-sleep.png" />
+      <img alt="Sleeping dog" class="dog2" src="assets/images/dog-sleep.gif" />
     </div>
-    <audio autoplay>
-      src="assets/audio/results.mp3"
-      volume: 0.5,
-      loop: true
-      type="audio/mp3">
-    </audio>
-  </body>
+    <div class="dog hidden" id="dog_maraca">
+      <img alt="Maraca dog" class="dog1" src="assets/images/dog-maraca.png" />
+      <img alt="Maraca dog" class="dog2" src="assets/images/dog-maraca.gif" />
+    </div>
+  </div>
+
+  <!-- INLINE SCRIPT (no CDN) -->
+  <script>
+    let maraca = false;
+    if (Math.random() >= 0.95) {
+      document.getElementById('dog_sleep').classList.add('hidden');
+      document.getElementById('dog_maraca').classList.remove('hidden');
+      maraca = true;
+    }
+
+    function playSound(sound) {
+      let audio = new Audio(sound);
+      audio.loop = true;
+      audio.volume = 0.5;
+      audio.play();
+      return audio;
+    }
+
+    let currentAudio = null;
+
+    document.querySelectorAll('.dog').forEach(dog => {
+      dog.addEventListener('click', () => {
+        let playing = dog.classList.contains('playing');
+        if (playing) {
+          if (currentAudio) currentAudio.pause();
+          dog.classList.remove('playing');
+          document.querySelectorAll('.dog1').forEach(el => el.style.opacity = 1);
+          document.querySelectorAll('.dog2').forEach(el => el.style.opacity = 0);
+        } else {
+          currentAudio = playSound(
+            maraca ? 'assets/audio/baci_perugina2.mp3' : 'assets/audio/results.mp3'
+          );
+          dog.classList.add('playing');
+          document.querySelectorAll('.dog1').forEach(el => el.style.opacity = 0);
+          document.querySelectorAll('.dog2').forEach(el => el.style.opacity = 1);
+        }
+      });
+    });
+  </script>
+</body>
 </html>
