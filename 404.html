@@ -7,7 +7,7 @@
   <meta content="#000000" name="theme-color">
   <meta content="noindex" name="robots">
   <title>room_dogcheck</title>
-  <link href="./room_dogcheck_files/extra.css" rel="stylesheet" type="text/css">
+  <link href="/assets/404/extra.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <main>
@@ -16,12 +16,12 @@
 
     <div id="center">
 <div class="dog playing" id="dog_sleep">
-<img alt="Sleeping dog" class="dog1" src="./room_dogcheck_files/dog-sleep.png" style="opacity: 0;">
-<img alt="Sleeping dog" class="dog2" src="./room_dogcheck_files/dog-sleep.gif" style="opacity: 1;">
+<img alt="Sleeping dog" class="dog1" src="/assets/404/dog-sleep.png" style="opacity: 0;">
+<img alt="Sleeping dog" class="dog2" src="/assets/404/dog-sleep.gif" style="opacity: 1;">
 </div>
 <div class="dog hidden playing" id="dog_maraca">
-<img alt="Maraca dog" class="dog1" src="./room_dogcheck_files/dog-maraca.png" style="opacity: 0;">
-<img alt="Maraca dog" class="dog2" src="./room_dogcheck_files/dog-maraca.gif" style="opacity: 1;">
+<img alt="Maraca dog" class="dog1" src="/assets/404/dog-maraca.png" style="opacity: 0;">
+<img alt="Maraca dog" class="dog2" src="/assets/404/dog-maraca.gif" style="opacity: 1;">
 </div>
 </div>
 <style>
@@ -49,13 +49,13 @@
   var maraca = false;
   
   var results = new Howl({
-    src: ['/assets/audio/results.ogg', '/assets/audio/results.mp3'],
+    src="assets/audio/results.mp3",
     volume: 0.5,
     loop: true
   });
   
   var baci = new Howl({
-    src: ['/assets/audio/baci_perugina2.ogg', '/assets/audio/baci_perugina2.mp3'],
+    src="assets/audio/baci_perugina2.mp3",
     volume: 0.5,
     loop: true
   });
