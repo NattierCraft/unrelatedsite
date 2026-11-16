@@ -1,0 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%; }
+@font-face {
+  font-family: '8bitOperatorPlus-Bold';
+  src: url("https://nattiercraft.github.io/unrelatedsite/assets/fonts/8bitOperatorPlus-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+  .text-left{text-align:left}
+  .text-center{text-align:center}
+  .text-right{text-align:right}
