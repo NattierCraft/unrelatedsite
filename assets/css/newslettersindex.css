@@ -10,3 +10,10 @@ html {
   .text-left{text-align:left}
   .text-center{text-align:center}
   .text-right{text-align:right}
+  .text-yellow-300{--tw-text-opacity:1;color:rgba(253,224,71,var(--tw-text-opacity))}
+  .text-xl{font-size:1.25rem;line-height:1.75rem}
+  .block{display:block}
+  .hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+  .text-6xl{font-size:3.75rem;line-height:1}
+  .mb-20{margin-bottom:5rem}
+  .mx-auto{margin-left:auto;margin-right:auto}
