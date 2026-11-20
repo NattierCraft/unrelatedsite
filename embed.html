@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>room_embed</title>
+
+  <!-- INLINE CSS (formerly extra.css) -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #fff;
+      font-family: "8bitOperatorPlus-Bold", monospace;
+    }
+
+    @font-face {
+      font-family: '8bitOperatorPlus-Bold';
+      src: url("assets/fonts/8bitOperatorPlus-Bold.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: '8bitOperatorPlus-Regular';
+      src: url("assets/fonts/8bitOperatorPlus-Regular.woff") format("woff");
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    #center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .dog {
+      min-width: 320px;
+      max-width: 100%;
+      min-height: 320px;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dog img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    .dog2 {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="center">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/aQ8F2H1prIo?si=9mChEOK279qTrXHL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
